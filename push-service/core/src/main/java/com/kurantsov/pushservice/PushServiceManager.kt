@@ -12,10 +12,8 @@ object PushServiceManager {
         private set
 
     private val isInitialized: AtomicBoolean = AtomicBoolean(false)
-    private val tokenChangedListeners: MutableSet<OnPushTokenChangedListener> =
-        CopyOnWriteArraySet()
-    private val pushMessageListeners: MutableSet<OnPushMessageReceivedListener> =
-        CopyOnWriteArraySet()
+    private val tokenChangedListeners: MutableSet<OnPushTokenChangedListener> = CopyOnWriteArraySet()
+    private val pushMessageListeners: MutableSet<OnPushMessageReceivedListener> = CopyOnWriteArraySet()
     private var selectedPushServiceType: PushServiceType? = null
 
     fun initialize(context: Context) {
